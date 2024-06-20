@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import starTexture from './public/star.png';
 
 // Scene setup
 const scene = new THREE.Scene();
@@ -14,7 +15,7 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 // Load Particle Texture
 const textureLoader = new THREE.TextureLoader();
-const particleTexture = textureLoader.load('star.png');
+const particleTexture = textureLoader.load(starTexture);
 
 // Particle system parameters
 const params = {
